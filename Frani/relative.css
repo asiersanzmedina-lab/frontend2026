@@ -1,0 +1,14 @@
+html{
+    font-family: cursive;
+}
+//*Use "." to select elements wiyh a specific class*/
+.poem_romantic{
+    background-color:crimson  ;
+}
+.poem_no_romantic{
+    background-color:darkkhaki;
+}
+/*Use element selectors*/
+h2{
+    color:brown;
+}
