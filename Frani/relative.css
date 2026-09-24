@@ -12,3 +12,8 @@ html{
 h2{
     color:brown;
 }
+
+div{
+    width: 40%;
+    border: 2px solid  ;
+}
