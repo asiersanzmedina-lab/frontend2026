@@ -3,8 +3,13 @@ html{
 }
 /*Use "." to select elements wiyh a specific class*/
 .poem_romantic{
-    position: relative;
+    position: static;
     left: 80px;
+    /*We use these properties to position the element relative
+    to its normalposition*/
+    /*right:80px;
+    bottom: 80px;*/
+
     background-color:crimson  ;
 }
 .poem_no_romantic{
