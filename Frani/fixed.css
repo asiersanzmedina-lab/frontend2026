@@ -1,7 +1,15 @@
-* {
+html{
     font-family: cursive;
+}
+h1{
+    position: fixed;
+    top: 0;
 }
 h2{
     position: fixed;
-    top: 0;
+    top:0;
+}
+div{
+    margin-top: 150px;
+    border: 2px solid black;
 }
