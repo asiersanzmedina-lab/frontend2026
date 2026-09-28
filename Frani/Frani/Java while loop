@@ -1,0 +1,112 @@
+# EJERCICIO 1
+def ejercicio_1():
+    print("--- Ejercicio 1: Números pares del 2 al 20 ---")
+ 
+    # Empezamos en 2, que es el primer número par que queremos mostrar
+    numero = 2
+ 
+    # La condición es <= 20 para que el 20 SÍ se imprima (ambos inclusive)
+    while numero <= 20:
+        # Mostramos el número actual por consola
+        print(numero)
+ 
+        # Sumamos 2 en cada vuelta para saltar de par en par
+        # (2, 4, 6, ... 20). Si nos olvidáramos de esta línea,
+        # el bucle sería infinito.
+        numero += 2
+ 
+    print()  # Línea en blanco para separar del siguiente ejercicio
+ 
+ 
+# EJERCICIO 2
+def ejercicio_2():
+    print("--- Ejercicio 2: Cuenta regresiva ---")
+ 
+    # Empezamos la cuenta en 10
+    contador = 10
+ 
+    # Mientras el contador sea mayor o igual que 1, seguimos contando.
+    # Cuando llegue a 0 la condición será falsa y saldremos del bucle.
+    while contador >= 1:
+        print(contador)
+ 
+        # Restamos 1 en cada vuelta (decremento)
+        contador -= 1
+ 
+    # Este print está FUERA del while (sin sangría extra), por lo que
+    # solo se ejecuta una vez, cuando la cuenta atrás ha terminado.
+    print("¡Despegue!")
+    print()
+ 
+ 
+# EJERCICIO 3
+def ejercicio_3():
+    print("--- Ejercicio 3: Suma acumulada del 1 al N ---")
+ 
+    # N es el último número que vamos a sumar
+    N = 10
+ 
+    # 'contador' recorre los números del 1 al N
+    contador = 1
+ 
+    # 'suma' es la variable acumuladora: empieza en 0 y va
+    # guardando el total de lo que llevamos sumado
+    suma = 0
+ 
+    while contador <= N:
+        # Añadimos el valor actual del contador al total
+        suma += contador
+ 
+        # Pasamos al siguiente número
+        contador += 1
+ 
+    # Al terminar el bucle mostramos el resultado (debe salir 55)
+    print(f"La suma de los números del 1 al {N} es: {suma}")
+    print()
+ 
+ 
+# EJERCICIO 4
+def ejercicio_4():
+    print("--- Ejercicio 4: Tabla de multiplicar ---")
+ 
+    # Número del que queremos la tabla (se puede cambiar por otro)
+    numero = 7
+ 
+    # El contador hará de multiplicador, de 1 a 10
+    multiplicador = 1
+ 
+    while multiplicador <= 10:
+        # Calculamos el resultado multiplicando el número por el contador
+        resultado = numero * multiplicador
+ 
+        # Mostramos la operación completa, por ejemplo: 7 x 3 = 21
+        print(f"{numero} x {multiplicador} = {resultado}")
+ 
+        # Incrementamos el multiplicador para la siguiente vuelta
+        multiplicador += 1
+ 
+    print()
+ 
+ 
+# EJERCICIO 5
+def ejercicio_5():
+    print("--- Ejercicio 5: Validación de PIN ---")
+ 
+    # PIN correcto. Lo guardamos como texto (str) porque input()
+    # siempre devuelve texto, así comparamos directamente y evitamos
+    # errores si el usuario escribe letras en vez de números.
+    PIN_CORRECTO = "1234"
+ 
+    # Pedimos el PIN por primera vez
+    pin_introducido = input("Introduce tu PIN: ")
+ 
+    # Mientras el PIN introducido sea DISTINTO al correcto,
+    # el bucle se repite y vuelve a pedirlo
+    while pin_introducido != PIN_CORRECTO:
+        print("PIN incorrecto. Inténtalo de nuevo.")
+        # Volvemos a pedir el PIN; si no lo hiciéramos, el bucle
+        # nunca terminaría porque la variable no cambiaría
+        pin_introducido = input("Introduce tu PIN: ")
+ 
+    # Al salir del bucle sabemos que el PIN es correcto
+    print("¡Acceso concedido!")
