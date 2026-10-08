@@ -1,0 +1,100 @@
+// //  Cea una clase Contado que inicie un valor (introducido en pantalla) y tenga metodos para: 
+// //  incrementar, disminuir y obtenerValor
+
+// class Contador {
+//   private int valor;
+
+//   public Contador(int valorInicial) {
+//     this.valor = valorInicial;
+//   }
+
+//   public void incrementar() {
+//     this.valor++;
+//   }
+
+//   public void disminuir() {
+//     this.valor--;
+//   }
+
+//   public int getValor() {
+//     return this.valor;
+//   }
+// }
+
+// public class Oop {
+  
+//   public static void main(String[] args) {
+//     Contador contador = new Contador(5);
+//     contador.incrementar();
+//     contador.disminuir();
+//     System.out.println("El valor final es: " + contador.getValor());
+//   }   
+// }
+
+public class Book{
+
+    private String title;
+    private String author;
+    private boolean borrowed;
+    private boolean waitlist;
+    private static int booksBorrowed = 0;
+}
+
+public Book(String title, String author) {
+    this.title = title;
+    this.author = author;
+    this.borrowed = false;
+    this.waitlist = false;
+}
+
+public String getTitle() {
+    return title;
+}
+
+public String getAuthor() {
+    return author;
+}
+
+public boolean getBorrowed() {
+    return borrowed;
+}
+
+public void setBorrowed(boolean b) {
+    borrowed = b;
+    if (borrowed) {
+        booksBorrowed = booksBorrowed + 1;
+    }
+    else {
+        booksBorrowed = booksBorrowed - 1;
+    }
+}
+public boolean getWaitlist() {
+    return waitlist;
+}
+public void setWaitlist(boolean b){
+    waitlist = b;
+}
+public static int getNumberOfBooksBorrowed() {
+    return booksBorrowed;
+}
+public String toString() {
+    return "Name of Book: " + title + ", Author of Book: " + author + ",Borrowed: " + borrowed + ", waitlist: " + waitlist;
+}
+
+public class LibraryMain{
+
+    public static void main(String[] args) {
+
+        Book one = new Book ("Commnunity and Support", "D Larkin");
+        book two = new Book ("Where is Archibald?", "C Rington");
+        Book there = new Book ("Horticulture for the Balcony", "A Abed");
+
+        one.setBorrowed(true);
+        two.setBorrowed(true);
+        two.setWaitlist(true);
+
+        System.out.println(one.tooString());
+        System.out.println(two.toString());
+        System.out.println("The number of books borrowed is: " + Book.getNumberOfBooksBorrowed());
+    }
+}

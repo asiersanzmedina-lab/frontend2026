@@ -61,36 +61,58 @@
 // Crea un programa que pida al usuario un número secreto 
 // El programa debe seguir pidiendo el numero 
 
-import java.util.Scanner;
+// import java.util.Scanner;
 
-public class Ejercicio6 {
+// public class Ejercicio6 {
             
-    Public static void main(String[] args){
-        Scanner scanner = new Scaner(System.in);
-        int numeroSecreto = 69;
-        int intento;
+//     Public static void main(String[] args){
+//         Scanner scanner = new Scaner(System.in);
+//         int numeroSecreto = 69;
+//         int intento;
 
-        System.out.println("Juego de adivinar el numero secreto");
+//         System.out.println("Juego de adivinar el numero secreto");
 
-        do{
-            System.out.println("Introduce un numero: ");
-            intento = scanner.nextInt();
+//         do{
+//             System.out.println("Introduce un numero: ");
+//             intento = scanner.nextInt();
 
-            if (intento < numeroSecreto){
-                System.out.println("El número secreto es mayor. Intenta de nuevo.");
-            } else if (intento < numeroSecreto){
-                System.out.println("El número secreto es menor. Intenta de nuevo.");
-            } else {
-                System.out.println("¡Felicidades! Has adivinado el número secreto.");
+//             if (intento < numeroSecreto){
+//                 System.out.println("El número secreto es mayor. Intenta de nuevo.");
+//             } else if (intento < numeroSecreto){
+//                 System.out.println("El número secreto es menor. Intenta de nuevo.");
+//             } else {
+//                 System.out.println("¡Felicidades! Has adivinado el número secreto.");
+//             }
+//         } while (intento != numeroSecreto);
+            
+//         scanner.close();
+//         }
+
+//     private static class Public {
+
+//         public Public() {
+//         }
+//     }
+//     }
+
+
+    // Crea un arreglo con 5 numeros enteros predefinidos.
+    //Calcula y muestra la suma total y media de todos sus elementos.
+
+    public class Ejercicio8 {
+        
+        public static void main(String[] args) {
+            int[] numeros = {5, 10, 15, 20, 25};
+            int suma = 0;
+
+            for (int i = 0; i < numeros.length; i++) {
+                suma += numeros[i];
             }
-        } while (intento != numeroSecreto);
-            
-        scanner.close();
-        }
 
-    private static class Public {
+            double media = (double) suma / numeros.length;
 
-        public Public() {
+            System.out.println("La suma total es: " + suma);
+            System.out.println("La media es: " + media);
         }
-    }
+        
     }

@@ -1,0 +1,88 @@
+//  1. Termostato
+class Termostato {
+    int temperatura;
+ 
+    Termostato(int temperatura) { this.temperatura = temperatura; }
+ 
+    void subirTemperatura(int grados) { temperatura += grados; }
+ 
+    boolean modoCalefaccion() { return temperatura < 20; }
+}
+ 
+//2. Batería
+class Bateria {
+    int carga = 100;   // empieza al 100%
+ 
+    void usar() { carga = Math.max(0, carga - 15); }   // pierde 15% por ciclo
+}
+ 
+//3. Estudiante
+class Estudiante {
+    String nombre;
+    double nota;
+ 
+    Estudiante(String nombre, double nota) { this.nombre = nombre; this.nota = nota; }
+}
+ 
+//4. Monedero y Persona
+class Monedero {
+    int monedas;
+ 
+    Monedero(int monedas) { this.monedas = monedas; }
+}
+ 
+class Persona {
+    String nombre;
+    Monedero monedero;
+ 
+    Persona(String nombre, int monedas) {
+        this.nombre = nombre;
+        monedero = new Monedero(monedas);
+    }
+ 
+    // Pasa monedas de su monedero al de otra persona
+    void pasarMonedas(Persona otra, int cantidad) {
+        if (cantidad <= monedero.monedas) {
+            monedero.monedas -= cantidad;
+            otra.monedero.monedas += cantidad;
+        }
+    }
+}
+
+ 
+public class Main {
+    public static void main(String[] args) {
+        // 1
+        System.out.println("1. Termostato");
+        Termostato t = new Termostato(15);
+        System.out.println(t.temperatura + "ºC, calefacción: " + t.modoCalefaccion());
+        t.subirTemperatura(7);
+        System.out.println(t.temperatura + "ºC, calefacción: " + t.modoCalefaccion());
+ 
+        // 2
+        System.out.println("2. Batería");
+        Bateria b = new Bateria();
+        while (b.carga > 0) {
+            b.usar();
+            System.out.println("Carga: " + b.carga + "%");
+        }
+ 
+        // 3
+        System.out.println("3. Estudiantes");
+        Estudiante[] lista = {
+            new Estudiante("Ana", 7.5),
+            new Estudiante("Luis", 5),
+            new Estudiante("Marta", 9)
+        };
+        double suma = 0;
+        for (Estudiante e : lista) suma += e.nota;
+        System.out.println("Nota promedio: " + suma / lista.length);
+ 
+        // 4
+        System.out.println("4. Monedero");
+        Persona juan = new Persona("Juan", 10);
+        Persona pedro = new Persona("Pedro", 5);
+        juan.pasarMonedas(pedro, 4);
+        System.out.println("Juan: " + juan.monedero.monedas + ", Pedro: " + pedro.monedero.monedas);
+    }
+}
