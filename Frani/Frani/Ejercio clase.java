@@ -56,3 +56,46 @@
 
 //     }
 // }
+
+//Crear la clase lampara que gestione su estado (encendido/apagado) y un nivel de brillo (1 en 5).
+//Solamente se puede ajustar el brillo si la lampara esta encendida
+
+// Clase Lampara
+public class Lampara {
+
+    // Datos de la lámpara
+    boolean encendida = false;  // empieza apagada
+    int brillo = 1;             // empieza con brillo 1
+
+    // Enciende la lámpara
+    void encender() {
+        encendida = true;
+    }
+
+    // Apaga la lámpara
+    void apagar() {
+        encendida = false;
+    }
+
+    // Cambia el brillo solo si está encendida
+    void ajustarBrillo(int nuevoBrillo) {
+        if (encendida == true) {
+            brillo = nuevoBrillo;
+        }
+    }
+
+    // Aquí empieza el programa
+    public static void main(String[] args) {
+
+        // Creo la lámpara
+        Lampara miLampara = new Lampara();
+
+        // La enciendo y pongo el brillo en 4
+        miLampara.encender();
+        miLampara.ajustarBrillo(4);
+
+        // Muestro los datos
+        System.out.println("Encendida: " + miLampara.encendida);
+        System.out.println("Brillo: " + miLampara.brillo);
+    }
+}

@@ -23,3 +23,13 @@ div{
     width: 40%;
     border: 2px solid  ;
 }
+
+h1{
+    border: 2px solid black;
+    border-radius: 50px;
+    align-items: center;
+    padding: 1px 10px 20px 30px;
+
+    position: fixed;
+    top: 50px;
+}
