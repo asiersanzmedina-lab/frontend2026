@@ -1,0 +1,30 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #7ccbe4;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+}
+
+.cajaFondo {
+  background-color: white;
+  padding: 30px;
+  width: 400px;
+}
+
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  resize: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: royalblue;
+  color: white;
+
+}

@@ -31,18 +31,28 @@ header > nav > ul{
     justify-content: space-evenly;
 }
 
-#my-projects > div{
+#myprojects > div{
     background-color: #f2f2f2;
     display: flex;
     border: 1px solid #ccc;
 }
 
-#my-projects > div > div{
+#my-projects > div > div:nth-child(odd){
     background-color: #f2f2f2;
     border: 1px solid #ccc;
     width: 150px;
     height: 150px;
     margin: 10px;
-    background-image: url(https://neliosoftware.com/es/blog/imagenes-gratuitas-para-tu-blog/);
+    background-image: url("C:\\Users\\asier\\Downloads\\fondo-diseno-patrones-organicos-abstractos_1048-19286.avif");
+    opacity: 0.5;
+}
+
+#my-projects > div > div:nth-child(even){
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    background-image: url("C:\\Users\\asier\\Downloads\\images.jpg");
     opacity: 0.5;
 }
