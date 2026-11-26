@@ -99,3 +99,7 @@ public class Lampara {
         System.out.println("Brillo: " + miLampara.brillo);
     }
 }
+
+
+// Calculadora de tarifa de transporte
+import java.util.Scanner;

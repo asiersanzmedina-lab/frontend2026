@@ -35,6 +35,8 @@ header > nav > ul{
     background-color: #f2f2f2;
     display: flex;
     border: 1px solid #ccc;
+
+    justify-content: space-around;
 }
 
 #my-projects > div > div:nth-child(odd){
@@ -55,4 +57,15 @@ header > nav > ul{
     margin: 10px;
     background-image: url("C:\\Users\\asier\\Downloads\\images.jpg");
     opacity: 0.5;
+
+    margin: 10px;
+    background-image: url("C:\\Users\\asier\\Downloads\\images.jpg");
+}
+
+.project{
+    /* flex-grow: 1;
+    flex-basis: 0;
+    flex-shrink: 1;*/
+    flex: 1 0 0;
+
 }
